@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .nav-item:hover {
+            background-color: #575757;
+        }
+
+        .trainer-profiles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .trainer-profile {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 22%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .trainer-profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .trainer-profile h2 {
+            margin: 10px 0;
+        }
+
+        .trainer-profile p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-item">Home</a>
+    </nav>
+
+    <main class="trainer-profiles">
+        <div class="trainer-profile">
+            <img src="trainer1.jpg" alt="Trainer 1">
+            <h2>Trainer Name 1</h2>
+            <p>Specialization: Fitness</p>
+            <p>Experience: 5 years</p>
+        </div>
+        <div class="trainer-profile">
+            <img src="trainer2.jpg" alt="Trainer 2">
+            <h2>Trainer Name 2</h2>
+            <p>Specialization: Yoga</p>
+            <p>Experience: 8 years</p>
+        </div>
+        <div class="trainer-profile">
+            <img src="trainer3.jpg" alt="Trainer 3">
+            <h2>Trainer Name 3</h2>
+            <p>Specialization: Nutrition</p>
+            <p>Experience: 6 years</p>
+        </div>
+        <div class="trainer-profile">
+            <img src="trainer4.jpg" alt="Trainer 4">
+            <h2>Trainer Name 4</h2>
+            <p>Specialization: Martial Arts</p>
+            <p>Experience: 10 years</p>
+        </div>
+    </main>
+</body>
+</html>

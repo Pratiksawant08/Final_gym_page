@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Gym Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .nav-item:hover {
+            background-color: #575757;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 15px;
+            width: 22%;
+            margin-bottom: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h2 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .product-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .product-card .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-item">Home</a>
+        
+    </nav>
+
+    <main class="shop-container">
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Dumbbell Set</h2>
+            <p>A versatile set for strength training.</p>
+            <p class="price">$49.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Yoga Mat</h2>
+            <p>Comfortable and durable for all yoga practices.</p>
+            <p class="price">$29.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Kettlebell</h2>
+            <p>Perfect for high-intensity workouts.</p>
+            <p class="price">$34.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product4.jpg" alt="Product 4">
+            <h2>Resistance Bands</h2>
+            <p>Great for strength and flexibility exercises.</p>
+            <p class="price">$19.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product5.jpg" alt="Product 5">
+            <h2>Medicine Ball</h2>
+            <p>Ideal for core workouts and explosive training.</p>
+            <p class="price">$39.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product6.jpg" alt="Product 6">
+            <h2>Jump Rope</h2>
+            <p>Excellent for cardio and coordination.</p>
+            <p class="price">$14.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product7.jpg" alt="Product 7">
+            <h2>Foam Roller</h2>
+            <p>Perfect for muscle recovery and flexibility.</p>
+            <p class="price">$24.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product8.jpg" alt="Product 8">
+            <h2>Gym Gloves</h2>
+            <p>Provides grip and protection during weightlifting.</p>
+            <p class="price">$15.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product9.jpg" alt="Product 9">
+            <h2>Ab Wheel</h2>
+            <p>Enhances core strength and stability.</p>
+            <p class="price">$22.99</p>
+        </div>
+        <div class="product-card">
+            <img src="product10.jpg" alt="Product 10">
+            <h2>Protein Shaker</h2>
+            <p>Convenient for mixing your protein shakes.</p>
+            <p class="price">$9.99</p>
+        </div>
+    </main>
+</body>
+</html>

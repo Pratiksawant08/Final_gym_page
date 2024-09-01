@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            margin: 80px auto 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .section p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="login_prat.html">Login</a>
+            
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Account Details</h2>
+
+        <div class="section">
+            <h3>Admission Information</h3>
+            <p><strong>Full Name:</strong> <span id="full-name">Loading...</span></p>
+            <p><strong>Email:</strong> <span id="email">Loading...</span></p>
+            <p><strong>Phone Number:</strong> <span id="phone">Loading...</span></p>
+            <p><strong>Preferred Plan:</strong> <span id="preferred-plan">Loading...</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve and display stored data from sessionStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const fullName = sessionStorage.getItem('full-name');
+            const email = sessionStorage.getItem('email');
+            const phone = sessionStorage.getItem('phone');
+            const plan = sessionStorage.getItem('preferred-plan');
+
+            document.getElementById('full-name').textContent = fullName || 'Not provided';
+            document.getElementById('email').textContent = email || 'Not provided';
+            document.getElementById('phone').textContent = phone || 'Not provided';
+            document.getElementById('preferred-plan').textContent = plan || 'Not provided';
+        });
+    </script>
+</body>
+</html>

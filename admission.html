@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 80px auto 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #ff5722;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Account.html">Account</a>
+            
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Admission Form</h2>
+        <form id="admissionForm">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="preferred-plan">Preferred Plan</label>
+                <select id="preferred-plan" name="preferred-plan" required>
+                    <option value="Basic">Basic Plan</option>
+                    <option value="Standard">Standard Plan</option>
+                    <option value="Premium">Premium Plan</option>
+                    <option value="Ultimate">Ultimate Plan</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Load existing form data from sessionStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const fullName = sessionStorage.getItem('full-name');
+            const email = sessionStorage.getItem('email');
+            const phone = sessionStorage.getItem('phone');
+            const plan = sessionStorage.getItem('preferred-plan');
+
+            if (fullName) document.getElementById('full-name').value = fullName;
+            if (email) document.getElementById('email').value = email;
+            if (phone) document.getElementById('phone').value = phone;
+            if (plan) document.getElementById('preferred-plan').value = plan;
+        });
+
+        // Handle form submission
+        document.getElementById('admissionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Save form data to sessionStorage
+            sessionStorage.setItem('full-name', document.getElementById('full-name').value);
+            sessionStorage.setItem('email', document.getElementById('email').value);
+            sessionStorage.setItem('phone', document.getElementById('phone').value);
+            sessionStorage.setItem('preferred-plan', document.getElementById('preferred-plan').value);
+
+            // Redirect to Account page
+            window.location.href = 'account.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Classes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .nav-item:hover {
+            background-color: #575757;
+        }
+
+        .classes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .class-card {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 22%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .class-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .class-card h2 {
+            margin: 10px 0;
+        }
+
+        .class-card p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .class-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .class-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-item">Home</a>
+    </nav>
+
+    <main class="classes-container">
+        <div class="class-card">
+            <img src="yoga-class.jpeg" alt="Yoga Class">
+            <h2>Yoga Class</h2>
+            <p>Level: Beginner</p>
+            <p>Duration: 1 hour</p>
+        </div>
+        <div class="class-card">
+            <img src="spin-class.jpeg" alt="Spin Class">
+            <h2>Spin Class</h2>
+            <p>Level: Intermediate</p>
+            <p>Duration: 45 minutes</p>
+        </div>
+        <div class="class-card">
+            <img src="strength-class.jpeg" alt="Strength Training">
+            <h2>Strength Training</h2>
+            <p>Level: Advanced</p>
+            <p>Duration: 1 hour</p>
+        </div>
+        <div class="class-card">
+            <img src="zumba-class.jpeg" alt="Zumba Class">
+            <h2>Zumba Class</h2>
+            <p>Level: All Levels</p>
+            <p>Duration: 1 hour</p>
+        </div>
+    </main>
+</body>
+</html>
